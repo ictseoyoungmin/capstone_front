@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Footer from "./component/footer";
 import Header from "./component/header";
-import UploadImageForm from './component/UploadImageForm';
+import Service from "./component/service";
+// import UploadImageForm from './component/UploadImageForm';
+import Dropzone from './component/tt';
 import { Container } from "reactstrap";
 
 import './App.css';
@@ -25,19 +27,18 @@ class App extends Component {
   
   render() {
     return (
-     <>
+      <>
+     <Container>
         <Header/>
-        <Container style={{margin:"0px"}}>
-          <Container style={{ minHeight:"5vh" }}></Container>   
-          <Container style={{ minHeight:"20vh" }}>
-            <UploadImageForm post = {this.props.post}
-                        resetState={this.props.resetState}
-                        toggle={this.toggle}
-            ></UploadImageForm>
-          </Container> 
-          <Container style={{ minHeight:"5vh" }}></Container> 
+        <Container style={{margin:"10px"}}>
+          <Dropzone/>
         </Container>
-        <Footer />
+        <Container style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
+          <Service/>
+        </Container> 
+      </Container>
+      <Footer/>
+
       </>
           );
   }

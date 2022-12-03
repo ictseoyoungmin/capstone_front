@@ -1,33 +1,24 @@
 import React from 'react';
-import icon from './resource/icon.png';
+import icon from './resource/icon.svg';
 import  './header.css';
 
 const Header = () => {
   return (
-    <header>
-      <div class="inner">
-        <h1><a href="#">
-          <img
-              alt=""
-              src={icon}
-              width="45"
-              height="45"
-            />{' '}
-            Image Forgery</a></h1>
-          
-            <ul id="gnb">
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">YOUTUBE</a></li>
-                <li><a href="#">COMMUNITY</a></li>
-                <li><a href="#">LOCATION</a></li>
+      <div class="header">
+          <nav className="navbar">
+            <ul class="navmake">
+              <li class="item">
+                <a href="#!" class="menu_link" role="menuitem"><span class="item_wrap" />Service</a>
+              </li>
+              <li class="item">
+                <a href="/" role="menuitem"><img src={icon} alt="" weight="70" height="90"/></a>
+              </li>
+              <li class="item">
+                <a href="#!" class="menu_link" role="menuitem"><span class="item_wrap"/>Tech</a>
+              </li>
             </ul>
-
-            <ul class="util">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Join</a></li>
-            </ul>
-        </div>
-    </header>
+          </nav>
+      </div>  
   );
 }
 

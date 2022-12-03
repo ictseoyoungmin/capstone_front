@@ -3,7 +3,10 @@ import { Form, Input, Button, Label, Container } from "reactstrap";
 import Stack from 'react-bootstrap/Stack'
 import axios from "axios";
 import './UploadImageForm.css'
+import Dropzonea from './test'
+import Dropzone from './tt'
 import { API_URL } from "../index";
+
 
 function UploadImageForm() {
   const [text, setText] = useState("없음");
@@ -65,35 +68,12 @@ function UploadImageForm() {
 
     return (
     <>
-      <Form onSubmit={uploadModule}>
-        <div>
-            <Stack direction="horizontal" gap={3}>
-              <Stack direction="vertical" gap={2}>
-                <Container style={{minHeight:"40vh"}}>
-                    {fileImage && (
-                      <img
-                        alt="sample"
-                        src={fileImage}
-                        style={{margin:"auto" ,maxWidth:"512px"}}
-                        />
-                    )}
-                </Container>
-                <Stack direction="horizontal" gap={3} style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
-                  <Input 
-                    id="imgUpload"
-                    type="file"
-                    accept="image/*"
-                    onChange={saveFileImage}
-                    placeholder="Your image"
-                    title="FILE"
-                    hidden={true}
-                  />
-                  <Label for="imgUpload" className="btn-secondary" style={{backgroundColor:'black', color:'white'}}>Select FILE</Label>
-                  <Button className="btn-secondary" type="submit">Send</Button>
-                  <Button color="danger" type="reset" onClick={() => deleteFileImage()}>Reset</Button>
-                </Stack>
-              </Stack>
-              <Stack direction="vertical" gap={2}>
+        <Container style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
+            <Stack direction="horizontal" gap={3} >
+              <Container style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
+              <Dropzone onClick={console.log("clk")}>
+                  </Dropzone>
+              </Container>
                 <Container style={{minHeight:"40vh", maxWidth:"512px"}}>
                   {heat && 
                     (<img src ={heat} alt = "result" style={{margin:"auto", maxWidth:"512px"}}/>)}
@@ -101,12 +81,11 @@ function UploadImageForm() {
                 <Container style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
                 {text && (<h1>{text}</h1>)}
                 </Container>
-              </Stack>
             </Stack>
-          </div>
-        </Form>
-      
-      
+          </Container>
+       
+        <Dropzonea>
+        </Dropzonea>
      
     </>
     );
