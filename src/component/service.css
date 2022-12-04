@@ -12,11 +12,29 @@
     font-style: normal;
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 .container {
     min-height: 100%;
     text-align: center;
-    padding: 90px 20px 150px;
+    padding: 90px 20px 150px 0px;
     
 }
 
@@ -50,6 +68,11 @@ ul {
 li {
     position: relative;
     display: inline-block;
+    
+}
+
+img {
+    margin-bottom: 35px;
 }
 
 .title {
@@ -59,6 +82,10 @@ li {
     left: 600px;
     padding:0px;
     left:0px;
+
+    margin-bottom: 35px;
+    animation: fadein 5s ease 3s;
+    -webkit-animation: fadein 3s;
 }
 
 .inst {
@@ -69,6 +96,10 @@ li {
     line-height: 34px;
     letter-spacing: -.5px;
     right:0px;
+
+    margin-bottom: 35px;
+    animation: fadein 5s ease 3s;
+    -webkit-animation: fadein 3s;
 } 
 
 .title+.inst{
@@ -92,26 +123,29 @@ li {
 
 .thick {
     font-family: 'Happiness-Sans-Title';
-    font-size: 20px;;
+    font-size: 20px;
 }
 
-.Tech_feature_01{
+.Tech_feature01{
     position: relative;
     right: 370px;
+    margin-bottom: 35px;
+    animation: fadein 5s ease 3s;
+    -webkit-animation: fadein 3s;
 }
 
-.Tech_feature_02{
+.Tech_feature02{
     position: relative;
     right: 0px;
+    margin-bottom: 35px;
+    animation: fadein 5s ease 3s;
+    -webkit-animation: fadein 3s;
 }
 
-.Tech_feature_03{
+.Tech_feature03{
     position: relative;
     left: 370px;
-}
-
-.Tech_feature_01::before {
-    width: 90px;
-    height:90px;
-    background-image: url();
+    margin-bottom: 35px;
+    animation: fadein 5s ease 3s;
+    -webkit-animation: fadein 3s;
 }

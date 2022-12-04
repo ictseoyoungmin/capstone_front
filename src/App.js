@@ -4,7 +4,10 @@ import Header from "./component/header";
 import Service from "./component/service";
 // import UploadImageForm from './component/UploadImageForm';
 import Dropzone from './component/tt';
+//import Dropzone from './component/test';
+import Tech from './component/tech';
 import { Container } from "reactstrap";
+
 
 import './App.css';
 
@@ -36,6 +39,7 @@ class App extends Component {
         <Container style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
           <Service/>
         </Container> 
+        <Tech/> 
       </Container>
       <Footer/>
 
