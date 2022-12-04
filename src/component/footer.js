@@ -6,7 +6,7 @@ const Footer = () => {
         <footer>
             <div class="inner">
                 <div class="upper">
-                    <h1>Image Forgery</h1>
+                    <h1>DeerLens</h1>
                     <ul>
                         <li><a href="#">Policy</a></li>
                         <li><a href="#">Terms</a></li>
@@ -21,8 +21,7 @@ const Footer = () => {
                         TEAM : YeongMin, JungYu, HeaJung, SuBin
                         TEL : 031-111-1111 C.P : 010-1234-5678
                     </address>
-                    <p>
-                        Â© 2022 SMU IF. Image Forgery.
+                    <p>Â© 2022 SMU DL. DeerLens.
                     </p>
                 </div>
             </div>
