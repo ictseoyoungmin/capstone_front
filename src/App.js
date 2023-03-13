@@ -6,6 +6,7 @@ import Service from "./component/service";
 import Dropzone from './component/tt';
 //import Dropzone from './component/test';
 import Tech from './component/tech';
+import Banner from './component/banner';
 import { Container } from "reactstrap";
 
 
@@ -31,6 +32,7 @@ class App extends Component {
   render() {
     return (
       <>
+      <Banner></Banner>
      <Container>
         <Header/>
         <Container style={{margin:"10px"}}>
@@ -39,7 +41,9 @@ class App extends Component {
         <Container style={{display: 'flex',justifyContent: 'center',alignItems: 'center',}}>
           <Service/>
         </Container> 
+        <Container>
         <Tech/> 
+        </Container>
       </Container>
       <Footer/>
 

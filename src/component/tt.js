@@ -4,6 +4,8 @@ import { useDropzone,DropZone } from "react-dropzone";
 import axios from "axios";
 import Stack from 'react-bootstrap/Stack'
 import { API_URL } from "../index";
+import { DownloadOutlined } from '@ant-design/icons';
+import pngegg from './resource/pngegg.png';
 
 // STYLE
 import "./tt.css";
@@ -131,12 +133,14 @@ function Dropzone(props) {
             onClick={(e) => e.stopPropagation}
           >
             <input {...getInputProps()} />
-            {!isDragActive&&!isView&&
-                <p style={{fontSize:"50px",marginTop:"revert"}}>Drag 'n' drop some files here, or click to select files</p>}
+            {!isDragActive&&!isView&&<p style={{fontSize:"30px"}}>
+            <p><DownloadOutlined style={{verticalAlign: 'middle', fontSize: '300%', paddingTop: '70px', paddingBottom: '70px'}}/></p>
+              Drag 'n' drop some files here, or click to select files</p>}
             {isDragActive&&<p>Drag</p>}
             {thumbs}
             {console.log(files)}
           </div>
+          
           <Stack direction="horizontal" style={{display:"flex",justifyContent: 'center',alignItems:"center",margin:"10px 0px", width:"450px", }}> 
               <Button type="button" onClick={open} style={{marginRight:"15px"}}>Select File</Button>
               <Button type="submit" onClick={()=>submitFile()} style={{marginRight:"15px"}}>Send</Button>
@@ -144,7 +148,9 @@ function Dropzone(props) {
           </Stack>
         </Stack>
 
-        <div className="arrow"></div>
+        <div className="arrow">
+          <img src={pngegg} alt=""/>
+        </div>
         <Stack direction="vertical" gap={2}>
           <div style={{maxWidth:"450px"}}>
             <div className="dropzone">
