@@ -128,7 +128,8 @@ img {
 
 .Tech_feature01{
     position: relative;
-    right: 370px;
+    bottom: -28px;
+    right: 220px;
     margin-bottom: 35px;
     animation: fadein 5s ease 3s;
     -webkit-animation: fadein 3s;
@@ -136,7 +137,7 @@ img {
 
 .Tech_feature02{
     position: relative;
-    right: 0px;
+    right: 50px;
     margin-bottom: 35px;
     animation: fadein 5s ease 3s;
     -webkit-animation: fadein 3s;
@@ -144,7 +145,7 @@ img {
 
 .Tech_feature03{
     position: relative;
-    left: 370px;
+    left: 150px;
     margin-bottom: 35px;
     animation: fadein 5s ease 3s;
     -webkit-animation: fadein 3s;
